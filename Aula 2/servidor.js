@@ -1,14 +1,19 @@
-const express = require ('express')
+const express = require('express')
 const app = express()
-app.use(express.static('public'))
-app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }))
-const PORT = 8080
+app.set('view engine', 'ejs')
 
-app.get("/", (requisicao, resposta) => {
-  resposta.send('')
+app.get('/', (request, response) => {
+    let resultado = ""
+    response.render(`index`, {resultado})
 })
-app.get("/index", (requisicao, resposta) => {
-  resposta.render('calculadora')
+app.post('/mol', (req, response) => {
+    let x = parseFloat(req.body.Massa)
+    let y = parseFloat(req.body.MassaMol)
+    let resultado = (x / y)
+    response.render(`index`, {resultado})
 })
-  app.listen(PORT, () => console.log(`Server rodando na porta ${PORT}`))
+const PORT = 8080
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`)
+})

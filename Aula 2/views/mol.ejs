@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nº de mol</title>
+</head>
+
+<body>
+  <h1>Número de mols</h1>
+  <form action="/mol" method="post">
+    <p>Fórmula: N = m / M</p>
+    <br>
+    Digite a massa:
+    <input type="number" name="Massa" id="Massa">
+    Digite a massa do mol:
+    <input type="number" name="MassaMol" id="MassaMol">
+    <input type="submit" value="Dividir">
+    <br>
+  </form>
+  <p id= "resultado">Resultado: <%=resultado%></p> 
+</body>
+
+</html>
