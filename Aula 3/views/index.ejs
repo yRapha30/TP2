@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <script>
+    function rota(rotax){
+        rotaz.action = rotax
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Calculadora</h1>
+  <form action="/" method="post" id="rotaz">
+    <br>
+    Primeiro número:
+    <input type="number" name="n1x" id="n1x">
+    Segundo número:
+    <input type="number" name="n2y" id="n2y">
+    <br>
+    <br>
+    <input type="submit" value="Somar" id="+" onclick="rota('/soma')">
+    <input type="submit" value="Subtrair" id="-" onclick="rota('/sub')">
+    <input type="submit" value="Multiplicar" id="*" onclick="rota('/mult')">
+    <input type="submit" value="Dividir" id="/" onclick="rota('/div')">
+    <br>
+  </form>
+  <p for="">Resultado:<%=resultado%></p> 
+</body>
+
+</html>
